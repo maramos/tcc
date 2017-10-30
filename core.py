@@ -11,25 +11,6 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 %matplotlib
 
-def userClassifier(X, y, epochs=30, verbose=0, prop=60, amostras=90, fold=10, n_money=10000.0, n_papel=0.0):
-	amostras = len(X) * amostras / 100
-	prop = amostras * prop / 100
-	X = np.array(X[:amostras]).astype('float32')
-	y = np.array(y[:amostras]).astype('float32')
-	X_train, X_test, y_train, y_test = X[:prop], X[prop:], y[:prop], y[prop:]
-
-	model = Sequential()
-	model.add(Dense(12, input_dim=X_train.shape[1], kernel_initializer='uniform', activation='relu'))
-	model.add(Dense(8,kernel_initializer='uniform',activation='relu'))
-	model.add(Dense(1,kernel_initializer='uniform',activation='sigmoid'))
-	model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-	fited_model = model.fit(X_train, y_train, epochs=epochs, batch_size=2, verbose=verbose)
-	model_output = model.predict(X_test)
-
-	print model.evaluate(X_test, y_test)
-
-	return model_output, X_test, y_test, model
-
 def useLSTM(X, y, epochs=30, verbose=0, prop=60, amostras=90, fold=10, n_money=10000.0, n_papel=0.0, plotInfos=True):
 	amostras = len(X) * amostras / 100
 	prop = amostras * prop / 100
@@ -265,6 +246,16 @@ def delta(v1, v2):
 		aux.append((j*100)/float(i))
 	return np.mean(np.array(aux)[~np.isnan(aux)])
 
+def test():
+	aux = [[],[]]
+	for i in range(10):
+	    try:
+	        aux[0].append(useDelay(X, y, **params)['money'][-1])
+	        aux[1].append(useDelay(Xv, y, **params)['money'][-1])
+	    except Exception as e:
+	        print str(e)
+	return aux
+
 if __name__ == '__main__':
 	path = '/home/maramos/Documentos/estudar/tcc/dados/'
 	histDolar = open(path + 'histDolar.csv').readlines()
@@ -287,13 +278,3 @@ if __name__ == '__main__':
 	saida_delay = useDelay(Xv, y, **params)
 	saida_LSTM = useLSTM(X, y, **params)
 	saida_classifier = userClassifier(X, y_bin.reshape(-1,1), **params)
-
-def test():
-	aux = [[],[]]
-	for i in range(10):
-	    try:
-	        aux[0].append(useDelay(X, y, **params)['money'][-1])
-	        aux[1].append(useDelay(Xv, y, **params)['money'][-1])
-	    except Exception as e:
-	        print str(e)
-	return aux

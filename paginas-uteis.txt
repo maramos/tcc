@@ -1,0 +1,36 @@
+Esqueleto (ABNT):
+http://meiradarocha.jor.br/news/tcc/modelos-de-tcc-e-monografia-conforme-abnt/
+
+unlock:
+http://sci-hub.cc/
+
+artigos:
+Stock Market Prediction System with Modular Neural Networks 
+http://ieeexplore.ieee.org.sci-hub.cc/document/5726498/
+
+Stock Price Pattern Recognition - A Recurrent Neural Network Approach - 
+http://ieeexplore.ieee.org/document/5726532/
+
+Using artificial neural network models in stock market index prediction
+http://www.sciencedirect.com.sci-hub.cc/science/article/pii/S0957417411002740
+
+A neural network approach to predicting stock exchange movements using external factors
+http://www.sciencedirect.com.sci-hub.cc/science/article/pii/S0950705106000153
+
+Time series forecasting using a hybrid ARIMA and neural network model
+http://www.sciencedirect.com/science/article/pii/S0925231201007020
+
+GLOBAL ATTRACTIVITY IN DELAYED HOPFIELD NEURAL NETWORK MODELS∗
+http://epubs.siam.org.sci-hub.cc/doi/abs/10.1137/S0036139997321219
+
+Stability in a model of a delayed neural network
+https://link.springer.com/article/10.1007%2FBF01049141?LI=true
+
+Phoneme recognition: neural networks vs. hidden Markov models vs. hidden Markov models
+http://ieeexplore.ieee.org.sci-hub.cc/document/196523/
+
+Phoneme recognition using time-delay neural networks
+http://ieeexplore.ieee.org.sci-hub.cc/document/21701/
+
+Neural Network Design *****
+http://dl.acm.org/citation.cfm?id=2721661
